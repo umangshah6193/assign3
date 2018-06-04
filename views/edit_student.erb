@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div>
+      <form method="post" action="/students/<%= @student.sid %>">
+        <input type="hidden" name="_method" value="put">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="student[fname]" value=<%= @student.fname %>>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="student[lname]" value=<%= @student.lname %>>
+        <label for="address">Address</label>
+        <input type="text" id="address" name="student[address]" value=<%= @student.address %>>
+        <label for="dob">Date of Birth</label>
+        <input type="text" id="address" name="student[dob]" value=<%= @student.dob %>>
+        <input type="submit" name="update" value="Update">
+      </form>
+    </div>
+    <div><a href="/students">Go Back</a></div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title><%= @student.fname %> <%= @student.lname %></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div>
+      <p>First Name: <%= @student.fname %></p>
+      <p>Last Name: <%= @student.lname %></p>
+      <p>Address: <%= @student.address %></p>
+      <p>Date of Birth: <%= @student.dob %></p>
+      <a href="/students/<%= @student.sid %>/edit">Edit Details</a>
+      <form method="post" action="/students/<%= @student.sid %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete Student">
+      </form>
+    </div>
+    <div><a href="/students">Go Back</a></div>
+  </body>
+</html>

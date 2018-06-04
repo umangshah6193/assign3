@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title><%= @title %></title>
+	<link rel="stylesheet" href="/style.css">
+  </head>
+<body>
+<div>
+<img src="/images/class.jpg" >
+<ul>
+<li><a href='/'>Home</a>  </li>
+<li><a href='/about'>About</a>  </li>
+<li><a href='/contact'>Contact</a>  </li>
+<li><a href='/students'>Students</a>  </li>
+<li><a href='/comments'>Comment</a>  </li>
+<li><a href='/video'>Video</a>  </li>
+<li><a href='/logout'>Logout</a>  </li>
+</ul>
+</div>
+
+<h3>List of Comments</h3>
+<% @comments.to_a.each do |comment| %>
+<a href='/comments/<%= comment.cid %>/viewdetails'><%= comment.comment %> - <%= comment.created_at %></a>
+<% end %>
+<div>
+<br>
+<form action='/comments/new'>
+<input type="submit" value = "Add new Comment!">
+</form>
+</div>
+</body>
+</html>

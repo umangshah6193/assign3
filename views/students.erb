@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Student List</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>Hello Student</h1>
+    <div id="nav">
+      <ul>
+        <li><a href="/" >Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/students">Students</a></li>
+        <li><a href="/comments">Comments</a></li>
+        <li><a href="/video">Video</a></li>
+        <li><a href="/logout" align="right">Logout</a></li>
+        <li><a href="/students/new">Add Student</a></li>
+      </ul>
+    </div>
+    <h3>List of students</h3>
+    <% @students.each do |student| %>
+    <div><a href="/students/<%= student.sid %>"><%= student.fname %></br></div>
+    <% end %>
+  </body>
+</html>

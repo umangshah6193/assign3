@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Add Comments</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>Comment details</h1>
+    <p>Comment id: <%= @comment.cid %></p>
+    <p>Comment: <%= @comment.comment %></p>
+    <p>Comment Owner: <%= @comment.name %></p>
+    <p>Comment Date: <%= @comment.created_at %></p>
+    <form method="post" action="/comments/<%= @comment.cid %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+      </form>
+      </div>
+      <div><a href="/comments">Go Back</a></div>
+  </body>
+</html>

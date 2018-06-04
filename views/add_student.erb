@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="/style.css">
+    <head>
+  <body>
+    <h1>Add Student</h1>
+    <div>
+      <form method="post" action="/students">
+        <label for="fname">Firstname</label>
+        <input type="text" id="fname" name=stud[fname] placeholder="First Name">
+        <label for="lname">Lastname</label>
+        <input type="text" id="lname" name=stud[lname] placeholder="Last Name">
+        <label for="address">Address</label>
+        <input type="text" id="address" name=stud[address] placeholder="Address">
+        <label for="dob">Date of Birth</label>
+        <input type="text" id="dob" name=stud[dob] placeholder="MM/DD/YYYY">
+        <input type="submit" name="add" value="Add">
+      </form>
+    </div>
+    <div><a href="/students">Go Back</a></div>
+    </form>
+  </body>
+</html>
